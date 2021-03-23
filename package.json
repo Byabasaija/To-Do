@@ -1,0 +1,23 @@
+{
+  "name": "to-do",
+  "version": "1.0.0",
+  "description": "A dynamic app to create objects",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Byabasaija/To-Do.git"
+  },
+  "author": "pascal byabasaija",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Byabasaija/To-Do/issues"
+  },
+  "homepage": "https://github.com/Byabasaija/To-Do#readme",
+  "devDependencies": {
+    "webpack": "^5.27.2",
+    "webpack-cli": "^4.5.0"
+  }
+}
