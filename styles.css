@@ -1,9 +1,49 @@
+.custom-checkbox {
+  height: 20px;
+  width: 20px;
+}
 
-   .project-box {
+.task-list-item {
+  border-radius: 6px !important;
+  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+  border-left-width: 5px !important;
+}
+ 
+ .project-box {
     min-height: 100vh;
     background-color: #f1f2f6;
   }
+
+
+.project-list-group {
+  list-style: none;
+  min-width: 100%;
+}
+
+.project-list-group > li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.project-list-group > li:hover {
+  background-color: #fff;
+}
+
+.task-completed,
+.task-completed:hover {
+  background: #f1f2f6;
+  color: #ced6e0;
+}
+
+.task-completed .task-title,
+.task-completed:hover .task-title {
+  text-decoration: line-through;
+}
   
+
+
+
 
 
   
