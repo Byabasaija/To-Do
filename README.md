@@ -14,7 +14,7 @@ A web app that allows one to to create a to do list organized in form of project
 - Linters
 
 ## Screenshot
-![screenshot](./assets/img/todo.png)
+![screenshot](./assets/img/shot.png)
 ## Live demo 
 
 [See Live](http://pascalbyabasaija.me/To-Do/dist/index.html)
