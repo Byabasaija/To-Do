@@ -3,7 +3,7 @@ const todoListView = () => {
   const render = (projectId, project, todoList) => {
     const element2 = `
         <div  class="d-flex justify-content-between pr-2  py-2">
-        <h3 class="text-center" data-project-index="${projectId}" id="project-title">${project.title}</h3>
+        <h3 class="text-center fst-italic" data-project-index="${projectId}" id="project-title">${project.title}</h3>
           <button type="button" class="btn btn-primary add-todo" data-toggle="modal" data-target="#todoModal">
           <i class="far fa-plus-square"></i>
           Task
@@ -17,9 +17,9 @@ const todoListView = () => {
                 <label for="todo${index}" class="ml-3 d-flex justify-content-between w-100 align-items-center mb-0">
                   <div class="mb-0">
                     <h4 class="task-title">${todo.title}</h4>
-                    <h5 class="mb-0"><small> <span>${todo.priority}</span></small></h5>
-                    <p class="mb-0"><small> <span>${todo.date}</span></small></p>
-                    <p class="mb-0"><small> <span>${todo.description}</span></small></p>
+                    <h5 class="mb-0  fst-italic"><small> <span>${todo.priority}</span></small></h5>
+                    <p class="mb-0  fst-italic"><small> <span>${todo.date}</span></small></p>
+                    <p class="mb-0  fst-italic"><small> <span>${todo.description}</span></small></p>
                   </div>
                 </label>
               </div>
