@@ -1,14 +1,12 @@
-import '@fortawesome/fontawesome-free/js/fontawesome'
-import '@fortawesome/fontawesome-free/js/solid'
-import '@fortawesome/fontawesome-free/js/regular'
-import '@fortawesome/fontawesome-free/js/brands'
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/solid';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/brands';
 import 'bootstrap';
 import 'jquery';
-import  projectLogic from './logic/projectLogic';
-import prepareProject from './prepare/prepareProject';
+import  {projectLogic, prepareProject} from './logic/projectLogic';
 import projectView from './view/projectView';
-import todoModel from './logic/todoModel';
-import prepareToDo from './prepare/prepareToDo';
+import {todoLogic, prepareToDo} from './logic/todoLogic';
 import todoListView from './view/todoListView';
 
 const form = document.getElementById('project-form');
@@ -19,9 +17,9 @@ form.addEventListener('submit', e => {
   const form = e.target;
   const { project } = form;
   if (project.value !== '' && project.value !== ' ') {
-    const controller = prepareProject(projectLogic, projectView);
-    controller.addProject(project.value);
-    controller.showProjects();
+    const prepare = prepareProject(projectLogic, projectView);
+    prepare.addProject(project.value);
+    prepare.showProjects();
     form.reset();
     $('#projectModal').modal('hide'); // eslint-disable-line
   }
@@ -35,8 +33,8 @@ todoForm.addEventListener('submit', e => {
   } = form;
   const projectId = document.getElementById('project-title').getAttribute('data-project-index');
   if (title.value !== '' && title.value !== ' ') {
-    const controller = prepareToDo(todoModel, todoListView);
-    controller.addTodo(
+    const prepare = prepareToDo(todoLogic, todoListView);
+    prepare.addTodo(
       title.value,
       priority.value,
       date.value,
@@ -44,7 +42,7 @@ todoForm.addEventListener('submit', e => {
       parseInt(projectId, 10),
       id.value,
     );
-    controller.showTodos(projectId);
+    prepare.showtodoList(projectId);
     form.reset();
     $('#todoModal').modal('hide'); // eslint-disable-line
   }
@@ -54,14 +52,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const projects = projectLogic().all();
   prepareProject(projectLogic, projectView).showProjects();
   if (projects.length > 0) {
-    prepareToDo(todoModel, todoListView).showTodos();
+    prepareToDo(todoLogic, todoListView).showtodoList();
   }
 });
 
 document.addEventListener('click', e => {
   if (e.target.classList.contains('project-item')) {
-    const controller = prepareToDo(todoModel, todoListView);
-    controller.showTodos(parseInt(e.target.getAttribute('data-index'), 10));
+    const prepare = prepareToDo(todoLogic, todoListView);
+    prepare.showtodoList(parseInt(e.target.getAttribute('data-index'), 10));
   }
  
   if (e.target.classList.contains('add-todo')) {
@@ -73,9 +71,9 @@ document.addEventListener('click', e => {
   if (e.target.classList.contains('todo-checkmark')) {
     const todo = e.target.getAttribute('data-todo');
     const project = e.target.getAttribute('data-project');
-    const controller = prepareToDo(todoModel, todoListView);
-    controller.completeTodo(parseInt(project, 10), parseInt(todo, 10));
-    controller.showTodos(parseInt(project, 10));
+    const prepare = prepareToDo(todoLogic, todoListView);
+    prepare.completeTodo(parseInt(project, 10), parseInt(todo, 10));
+    prepare.showtodoList(parseInt(project, 10));
   }
 });
 

@@ -4,7 +4,11 @@
   "description": "A dynamic app to create objects",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack serve --mode development --open",
+    "mode": "development"
   },
   "repository": {
     "type": "git",

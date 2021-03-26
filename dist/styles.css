@@ -1,17 +1,7 @@
-.custom-checkbox {
-  height: 20px;
-  width: 20px;
-}
 
-.task-list-item {
-  border-radius: 6px !important;
-  box-shadow: 0 0 5px rgb(0 0 0 / 10%);
-  border-left-width: 5px !important;
-}
- 
  .project-box {
     min-height: 100vh;
-    background-color: #f1f2f6;
+    background-color: #6677bd;
   }
 
 
@@ -27,7 +17,7 @@
 }
 
 .project-list-group > li:hover {
-  background-color: #fff;
+  background-color: rgb(15, 14, 14);
 }
 
 .task-completed,

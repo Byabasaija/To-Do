@@ -26,6 +26,22 @@ const projectLogic = () => {
     };
   };
 
+  const prepareProject = (projectLogic, projectView) => {
+    const logic= projectLogic();
+    const view = projectView();
   
+    const addProject = title => {
+      const newProject = logic.project(title);
+      logic.save(newProject);
+    };
   
-  export default projectLogic  ;
+    const showProjects = () => {
+      view.render(logic.all());
+    };
+  
+    return { addProject, showProjects };
+  };
+
+ 
+  
+  export {projectLogic, prepareProject} ;
