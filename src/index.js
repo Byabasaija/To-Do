@@ -4,15 +4,15 @@ import '@fortawesome/fontawesome-free/js/regular';
 import '@fortawesome/fontawesome-free/js/brands';
 import 'bootstrap';
 import 'jquery';
-import  {projectLogic, prepareProject} from './logic/projectLogic';
+import { projectLogic, prepareProject } from './logic/projectLogic';
 import projectView from './view/projectView';
-import {todoLogic, prepareToDo} from './logic/todoLogic';
+import { todoLogic, prepareToDo } from './logic/todoLogic';
 import todoListView from './view/todoListView';
 
 const form = document.getElementById('project-form');
 const todoForm = document.getElementById('todo-form');
 
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
   e.preventDefault();
   const form = e.target;
   const { project } = form;
@@ -25,7 +25,7 @@ form.addEventListener('submit', e => {
   }
 });
 
-todoForm.addEventListener('submit', e => {
+todoForm.addEventListener('submit', (e) => {
   e.preventDefault();
   const form = e.target;
   const {
@@ -56,12 +56,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-document.addEventListener('click', e => {
+document.addEventListener('click', (e) => {
   if (e.target.classList.contains('project-item')) {
     const prepare = prepareToDo(todoLogic, todoListView);
     prepare.showtodoList(parseInt(e.target.getAttribute('data-index'), 10));
   }
- 
+
   if (e.target.classList.contains('add-todo')) {
     document.querySelector('.add-task-btn').style.display = 'block';
     todoForm.reset();
@@ -76,4 +76,3 @@ document.addEventListener('click', e => {
     prepare.showtodoList(parseInt(project, 10));
   }
 });
-

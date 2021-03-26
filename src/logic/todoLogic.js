@@ -1,4 +1,4 @@
-import {projectLogic} from './projectLogic';
+import { projectLogic } from './projectLogic';
 
 const todoLogic = () => {
   const todo = (title, priority, dueDate, description) => ({
@@ -6,8 +6,7 @@ const todoLogic = () => {
   });
 
 
-  const getProject = (id) => projectLogic
-  ().get(id);
+  const getProject = (id) => projectLogic().get(id);
 
 
   const all = (projectId) => {
@@ -33,12 +32,12 @@ const todoLogic = () => {
   };
 
   return {
-    todo, all, save, get, getProject
+    todo, all, save, get, getProject,
   };
 };
 
 const prepareToDo = (todoLogic, todoListView) => {
-  const logic= todoLogic();
+  const logic = todoLogic();
   const view = todoListView();
 
   const addTodo = (title, priority, dueDate, description, projectId, id = null) => {
@@ -63,10 +62,9 @@ const prepareToDo = (todoLogic, todoListView) => {
 
 
   return {
-    addTodo, showtodoList,  completeTodo,
+    addTodo, showtodoList, completeTodo,
   };
 };
 
 
-export {todoLogic, prepareToDo} ;
-
+export { todoLogic, prepareToDo };

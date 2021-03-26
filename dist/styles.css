@@ -5,32 +5,22 @@
   }
 
 
-.project-list-group {
+.project-group {
   list-style: none;
   min-width: 100%;
 }
 
-.project-list-group > li {
+.project-group > li {
   padding: 10px;
   cursor: pointer;
   font-weight: 600;
 }
 
-.project-list-group > li:hover {
+.project-group > li:hover {
   background-color: rgb(15, 14, 14);
 }
 
-.task-completed,
-.task-completed:hover {
-  background: #f1f2f6;
-  color: #ced6e0;
-}
 
-.task-completed .task-title,
-.task-completed:hover .task-title {
-  text-decoration: line-through;
-}
-  
 
 
 

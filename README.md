@@ -13,15 +13,17 @@ A web app that allows one to to create a to do list organized in form of project
 - Webpack
 - Linters
 
+## Screenshot
+![screenshot](./assets/img/todo.png)
 ## Live demo 
 
-[See Live](http://pascalbyabasaija.me/Restaurant-page/dist/index.html)
+[See Live](http://pascalbyabasaija.me/To-Do/dist/index.html)
 
 ## Getting started
 
 Clone or fork the source code into your local machine
 ```
-git clone https://github.com/Byabasaija/To-do.git
+git clone https://github.com/Byabasaija/To-Do.git
 ```
 ```cd``` into the cloned directory using
 ```

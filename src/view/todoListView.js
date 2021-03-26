@@ -1,7 +1,7 @@
 
 const todoListView = () => {
-    const render = (projectId, project, todoList) => {
-      const element2 = `
+  const render = (projectId, project, todoList) => {
+    const element2 = `
         <div  class="d-flex justify-content-between pr-2  py-2">
         <h3 class="text-center" data-project-index="${projectId}" id="project-title">${project.title}</h3>
           <button type="button" class="btn btn-primary add-todo" data-toggle="modal" data-target="#todoModal">
@@ -27,11 +27,11 @@ const todoListView = () => {
           `).join('')}
         </ul>
         `;
-      document.getElementById('todoList').innerHTML = element2;
-    };
-  
-  
-    return  { render };
+    document.getElementById('todoList').innerHTML = element2;
   };
-  
-  export default todoListView;
+
+
+  return { render };
+};
+
+export default todoListView;
