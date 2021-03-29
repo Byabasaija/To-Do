@@ -22,6 +22,8 @@ const todoListView = () => {
                     <p class="mb-0  fst-italic"><small> <span>${todo.description}</span></small></p>
                   </div>
                 </label>
+                <button type="submit" class="btn btn-outline-success edit-todo" data-toggle="modal" data-target="#todoModal" data-todo="${index}" data-project="${projectId}">Edit</button>
+                <button type="submit" class="btn btn-outline-danger delete-todo" data-todo="${index}" data-project="${projectId}" >Delete</button>
               </div>
             </li>
           `).join('')}

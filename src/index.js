@@ -62,6 +62,22 @@ document.addEventListener('click', (e) => {
     prepare.showtodoList(parseInt(e.target.getAttribute('data-index'), 10));
   }
 
+  if (e.target.classList.contains('delete-todo')) {
+    const todo = e.target.getAttribute('data-todo');
+    const project = e.target.getAttribute('data-project');
+    todoLogic().remove(project, todo);
+    const prepare = prepareToDo(todoLogic, todoView);
+    prepare.showTodos(parseInt(project, 10));
+  }
+
+  if (e.target.classList.contains('edit-todo')) {
+    const todo = e.target.getAttribute('data-todo');
+    const project = e.target.getAttribute('data-project');
+    const prepare = prepareToDo(todoLogic, todoView);
+    prepare.editTodo(parseInt(project, 10), parseInt(todo, 10));
+  
+  }
+
   if (e.target.classList.contains('add-todo')) {
     document.querySelector('.add-task-btn').style.display = 'block';
     todoForm.reset();
