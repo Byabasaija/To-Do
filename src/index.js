@@ -75,8 +75,6 @@ document.addEventListener('click', (e) => {
     const project = e.target.getAttribute('data-project');
     const prepare = prepareToDo(todoLogic, todoListView);
     prepare.editTodo(parseInt(project, 10), parseInt(todo, 10));
-
-  
   }
 
   if (e.target.classList.contains('add-todo')) {

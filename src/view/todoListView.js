@@ -22,15 +22,18 @@ const todoListView = () => {
                     <p class="mb-0  fst-italic"><small> <span>${todo.description}</span></small></p>
                   </div>
                 </label>
-                <button type="submit" class="btn btn-outline-success edit-todo" data-toggle="modal" data-target="#todoModal" data-todo="${index}" data-project="${projectId}">Edit</button>
+                <button type="submit" class="btn btn-outline-primary edit-todo mr-3" data-toggle="modal" data-target="#todoModal" data-todo="${index}" data-project="${projectId}">Edit</button>
+                
                 <button type="submit" class="btn btn-outline-danger delete-todo" data-todo="${index}" data-project="${projectId}" >Delete</button>
               </div>
+             
             </li>
           `).join('')}
         </ul>
         `;
     document.getElementById('todoList').innerHTML = element2;
   };
+
 
   const updateTodo = (todo, todoId) => {
     const form = document.getElementById('todo-form');
@@ -46,7 +49,6 @@ const todoListView = () => {
     document.querySelector('.add-task-btn').style.display = 'none';
     document.querySelector('.update-task-btn').style.display = 'block';
   };
-
 
 
   return { render, updateTodo };

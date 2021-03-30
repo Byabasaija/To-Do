@@ -72,7 +72,7 @@ const prepareToDo = (todoLogic, todoListView) => {
   const showtodoList = (projectId = 0) => {
     view.render(projectId, logic.getProject(projectId), logic.all(projectId));
   };
-   
+
   const removeTodo = (projectId, todoId) => {
     logic.remove(projectId, todoId);
   };
