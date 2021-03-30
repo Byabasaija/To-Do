@@ -78,7 +78,7 @@ const prepareToDo = (todoLogic, todoListView) => {
   };
 
   const editTodo = (projectId, todoId) => {
-    view.updateTodoLogic(logic.get(projectId, todoId), todoId);
+    view.updateTodo(logic.get(projectId, todoId), todoId);
   };
 
   const completeTodo = (projectId, todoId) => {

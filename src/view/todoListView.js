@@ -32,8 +32,24 @@ const todoListView = () => {
     document.getElementById('todoList').innerHTML = element2;
   };
 
+  const updateTodo = (todo, todoId) => {
+    const form = document.getElementById('todo-form');
+    const {
+      title, priority, date, description, id,
+    } = form;
+    title.value = todo.title;
+    priority.value = todo.priority;
+    date.value = todo.date;
+    description.value = todo.description;
+    id.value = todoId;
 
-  return { render };
+    document.querySelector('.add-task-btn').style.display = 'none';
+    document.querySelector('.update-task-btn').style.display = 'block';
+  };
+
+
+
+  return { render, updateTodo };
 };
 
 export default todoListView;

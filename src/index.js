@@ -66,20 +66,22 @@ document.addEventListener('click', (e) => {
     const todo = e.target.getAttribute('data-todo');
     const project = e.target.getAttribute('data-project');
     todoLogic().remove(project, todo);
-    const prepare = prepareToDo(todoLogic, todoView);
-    prepare.showTodos(parseInt(project, 10));
+    const prepare = prepareToDo(todoLogic, todoListView);
+    prepare.showtodoList(parseInt(project, 10));
   }
 
   if (e.target.classList.contains('edit-todo')) {
     const todo = e.target.getAttribute('data-todo');
     const project = e.target.getAttribute('data-project');
-    const prepare = prepareToDo(todoLogic, todoView);
+    const prepare = prepareToDo(todoLogic, todoListView);
     prepare.editTodo(parseInt(project, 10), parseInt(todo, 10));
+
   
   }
 
   if (e.target.classList.contains('add-todo')) {
     document.querySelector('.add-task-btn').style.display = 'block';
+    document.querySelector('.update-task-btn').style.display = 'none';
     todoForm.reset();
     todoForm.id.value = '';
   }
