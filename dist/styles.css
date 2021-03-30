@@ -1,0 +1,30 @@
+
+ .project-box {
+    min-height: 100vh;
+    background-color: #6677bd;
+  }
+
+
+.project-group {
+  list-style: none;
+  min-width: 100%;
+}
+
+.project-group > li {
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.project-group > li:hover {
+  background-color: rgb(15, 14, 14);
+}
+
+
+
+
+
+
+
+  
+ 
