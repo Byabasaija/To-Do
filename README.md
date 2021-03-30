@@ -14,7 +14,7 @@ A web app that allows one to to create a to do list organized in form of project
 - Linters
 
 ## Screenshot
-![screenshot](./assets/img/shot.png)
+![screenshot](./assets/img/shot1.png)
 ## Live demo 
 
 [See Live](http://pascalbyabasaija.me/To-Do/dist/index.html)
@@ -37,7 +37,7 @@ code .
 
 Run ``` npm install ``` to install dependences
 
-Navigate to  ``` dist/index.html ``` to run the project.
+Navigate to  ``` dist/index.html ``` to run the project, or in your terminal run ``` npm start ``` and click on dist when your browser opens.
 
 
 ## Author
