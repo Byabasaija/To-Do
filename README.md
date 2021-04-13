@@ -39,6 +39,14 @@ Run ``` npm install ``` to install dependences
 
 Navigate to  ``` dist/index.html ``` to run the project, or in your terminal run ``` npm start ``` and click on dist when your browser opens.
 
+## Running tests
+
+In the root directory, run
+
+```
+npm run test
+```
+
 
 ## Author
 **Pascal Byabasaija**
