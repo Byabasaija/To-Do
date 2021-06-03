@@ -17,7 +17,7 @@ A web app that allows one to to create a to do list organized in form of project
 ![screenshot](./assets/img/shot1.png)
 ## Live demo 
 
-[See Live](http://pascalbyabasaija.me/To-Do/dist/index.html)
+[See Live](https://byabasaija.github.io/To-Do/dist/index.html)
 
 ## Getting started
 
